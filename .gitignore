@@ -1,0 +1,22 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+
+
+
+# 日志
+logs/
+*.log
+
+# 测试/构建缓存
+.pytest_cache/
+.mypy_cache/
+dist/
+build/
+
+# 本地数据库文件
+*.sqlite3
+*.db
