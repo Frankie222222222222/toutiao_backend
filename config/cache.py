@@ -1,14 +1,16 @@
 from typing import Any
 import os
 import  redis.asyncio as redis,json
+from dotenv import load_dotenv
 
 
+load_dotenv()
 REDIS_HOST = os.getenv("REDIS_HOST")
 REDIS_PORT = os.getenv("REDIS_PORT")
 REDIS_DB = os.getenv("REDIS_DB ")
 #创建redis的连接对象
 redis_client = redis.Redis(host=REDIS_HOST, # redis服务地址
-                           port= REDIS_PORT, # redis端口号
+                           port= int(REDIS_PORT), # redis端口号
                            db=REDIS_DB, # redis数据库编号
                            decode_responses= True # 是否将字节数据解码为字符串
  )
